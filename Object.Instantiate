@@ -4,7 +4,12 @@ public static Object Instantiate(Object original, Transform parent, bool instant
 public static Object Instantiate(Object original, Vector3 position, Quaternion rotation);
 public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
 
-
+//original = An existing object that you want to make a copy of.
+//position = Position for the new object.
+//rotation = Orientation of the new object.
+//parent = Parent that will be assigned to the new object.
+//instantiateInWorldSpace = Pass true when assigning a parent Object to maintain the world position of the Object, 
+instead of setting its position relative to the new parent. Pass false to set the Object's position relative to its new parent.
 
 
 // Instantiates 10 copies of Prefab each 2 units apart from each other
