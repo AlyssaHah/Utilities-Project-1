@@ -45,7 +45,52 @@ namespace Rextester
                 
              if (meaningOfLife == 42){
              bool inScope = true;
-             }//if block
+             }//if block statement
+            
+            
+            
+            
+            
+            
+            
+            
+            struct Point2D{
+             public int X;
+             public int Y;
+            } //structure is a 2D point with two properities, they represent a location
+            
+            
+            Point2D myPoint = new Point2D();//new object
+            
+            myPoint.X = 10;//properties of Point2D
+            myPoint.Y = 20;
+            
+            public void AddPoint(Point2D anotherPoint) {
+              this.X = this.X + anotherPoint.X;
+              this.Y = this.Y + anotherPoint.Y;
+            }//method adds the two points together
+            
+            
+            Point2D anotherPoint = new Point2D();
+            anotherPoint.X = 5; //creating another Point2D object
+            anotherPoint.Y = 15;
+            
+            
+            myPoint.AddPoint(anotherPoint);//adds the points together
+            
+            Console.WriteLine(myPoint.X);
+            Console.WriteLine(myPoint.Y);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
