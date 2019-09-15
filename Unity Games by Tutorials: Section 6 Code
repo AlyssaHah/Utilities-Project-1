@@ -83,7 +83,64 @@ namespace Rextester
             
             
             
+             
             
+            //classes
+            
+            class Point2DRef {
+                public int X;
+                public int Y;
+                
+                public void AddPoint(Point2DRef anotherPoint){
+                    this.X = this.X + anotherPoint.X;
+                    this.Y = this.Y + anotherPoint.Y;
+                    
+                }//this struct is a value type, the class is a reference type
+                
+                Point2D yetAnotherPoint = myPoint;
+                yetAnotherPoint.X = 100;//new Point2D object
+                
+                Point2DRef pointRef = new Point2DRef();
+                pointRef.X = 20;
+                Point2DRef anotherRef = pointRef;
+                anotherRef.X = 25; //creates instance of Point2DRef, assigns value
+                
+                
+                
+                
+                //with classes
+                pointRef = null;
+                anotherRef.X = 125;
+                anotherRef = null;//garbage collection, removes non-referencing objects from memory
+                
+                
+                
+                //inheritance
+                class Person{
+                    public string Name;
+                    public virtual void SayHello(){
+
+                        Console.WriteLine("Hello");
+                    }
+                }//class called person that has a string and a method
+                
+                
+                class RenFairePerson : Person{
+                    base.SayHello();//will call parent class first
+                    public override void SayHello(){
+                     Console.Write("Huzzah");   
+                    }
+                    
+                }//Override class
+                
+                
+                RenFairePerson person = new RenFairePerson();
+                person.Name = "Igor the Ratcatcher";
+                person.SayHello();//prints override class 
+                
+                
+               
+                
             
             
             
